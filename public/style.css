@@ -1,71 +1,52 @@
-/* styles */
-/* called by your view template */
-
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  justify-content: space-between;
+  margin: 0;
+  min-height: 100vh;
 }
 
-h1 {
-  font-style: italic;
-  color: #373fff;
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
 }
 
-.bold {
-  font-weight: bold;
+.banner {
+  width: 100%;
+}
+
+main {
+  border: 1px solid black;
 }
 
 p {
-  max-width: 600px;
+  font-size: 1.1rem;
+  padding: 10px;
+  text-align: center;
 }
 
-form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: cyan;
-  display: inline-block;
-  width: 100%;
-  max-width: 340px;
-  border-radius: 3px;
-}
-
-input {
+img {
   display: block;
-  margin-bottom: 10px;
-  padding: 5px;
-  width: 100%;
-  border: 1px solid lightgrey;
-  border-radius: 3px;
-  font-size: 16px;
-}
-
-button {
-  font-size: 16px;
-  border-radius: 3px;
-  background-color: lightgrey;
-  border: 1px solid grey;
-  box-shadow: 2px 2px teal;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: yellow;
-}
-
-button:active {
-  box-shadow: none;
-}
-
-li {
-  margin-bottom: 5px;
+  margin: 0 auto;
+  max-width: 100%;
 }
 
 footer {
-  margin-top: 50px;
-  padding-top: 25px;
-  border-top: 1px solid lightgrey;
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1.3rem;
+  height: 7vh;
+  justify-content: center;
+  min-height: 50px;
+  padding: 10px;
+  width: 100%;
 }
