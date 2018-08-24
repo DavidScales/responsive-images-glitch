@@ -19,27 +19,29 @@ header {
   width: 100%;
 }
 
-.banner {
+section {
   width: 100%;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 main {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .left-arrow {
-  border-bottom: 10px solid #f6f6f6;
-  border-right: 20px solid #77c;
-  border-top: 10px solid #f6f6f6;
+  border-bottom: 10px solid #ffffff;
+  border-right: 20px solid #3F51B5;
+  border-top: 10px solid #ffffff;
   font-size: 0;
   line-height: 0%;
   width: 0;
 }
 
 .right-arrow {
-  border-bottom: 10px solid #f6f6f6;
-  border-left: 20px solid #77c;
-  border-top: 10px solid #f6f6f6;
+  border-bottom: 10px solid #ffffff;
+  border-left: 20px solid #3F51B5;
+  border-top: 10px solid #ffffff;
   font-size: 0;
   line-height: 0%;
   width: 0;
@@ -52,15 +54,19 @@ main {
 }
 
 .line {
-  border-bottom: 2px green solid;
+  border-bottom: 2px #3F51B5 solid;
   transform: translateY(-43%);
   width: 100%;
 }
 
 p {
   font-size: 1.1rem;
-  padding: 10px;
+  margin: 0;
   text-align: center;
+}
+
+span {
+  font-weight: bold;
 }
 
 img {

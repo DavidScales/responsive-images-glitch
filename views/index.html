@@ -26,22 +26,17 @@
         }
       }
     </style>
+
   </head>
   <body>
     <header>
       <h1>Responsive Images</h1>
     </header>
-
-    <section class="banner">
-        <p>Window width: <span id="window-width"></span></p>
-        <div class="across">
-          <span class="left-arrow"></span>
-          <span class="line"></span>
-          <span class="right-arrow"></span>
-        </div>
-    </section>
-
+    <section id="window-width"></section>
     <main>
+
+        <div id="img-url"></div>
+
         <!-- TODO: make our image responsive! -->
         <img srcset="/images/doggo-small.jpg 400w,
                      /images/doggo-medium.jpg 800w,
@@ -51,15 +46,10 @@
                     90vw"
              src="doggo-small.jpg" alt="A handsome doggo waiting patiently">
 
-        <p>Image URL: <span id="img-url"></span></p>
-        <p>Current Image width: <span id="img-width"></span></p>
-        <div class="across">
-          <span class="left-arrow"></span>
-          <span class="line"></span>
-          <span class="right-arrow"></span>
-        </div>
-    </main>
+        <br>
+        <section id="img-width"></section>
 
+    </main>
     <footer>
       <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">
         Learn more
