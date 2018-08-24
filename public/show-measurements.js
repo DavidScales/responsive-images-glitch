@@ -27,7 +27,7 @@ const windowWidthElem = document.querySelector('#window-width');
 const updatePage = () => {
   showUrl(imgUrlElem, 'Image URL', imgElem.currentSrc)
   showMeasurement(windowWidthElem, 'Window width', window.innerWidth);
-  showMeasurement(imgWidthElem, 'Image width', imgElem.naturalWidth);
+  showMeasurement(imgWidthElem, 'Image width', imgElem.width);
   updatingDOM = false;
 };
 
