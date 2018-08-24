@@ -1,7 +1,6 @@
 // This JavaScript shows the window & image width measurements in the DOM.
 // You can ignore this file, it doesn't effect the page images
 
-
 const showMeasurement = (parentElem, text, width) => {
   parentElem.innerHTML = `
   <p>${text}: <span>${width}px</span></p>
@@ -19,7 +18,8 @@ const showUrl = (parentElem, text, url) => {
   `;
 };
 
-// TODO: throttle the resize event listener
+let updatingDOM = false;
+
 const imgElem = document.querySelector('img');
 const imgUrlElem = document.querySelector('#img-url');
 const imgWidthElem = document.querySelector('#img-width');
@@ -28,8 +28,17 @@ const updatePage = () => {
   showUrl(imgUrlElem, 'Image URL', imgElem.currentSrc)
   showMeasurement(windowWidthElem, 'Window width', window.innerWidth);
   showMeasurement(imgWidthElem, 'Image width', imgElem.naturalWidth);
+  updatingDOM = false;
 };
+
+const throttledResize = () => {
+  if (!updatingDOM) {
+    updatingDOM = true;
+    window.requestAnimationFrame(updatePage);
+  }
+};
+
+window.addEventListener('resize', throttledResize);
+
 imgElem.onload = updatePage;
 updatePage();
-window.addEventListener('resize', updatePage);
-
