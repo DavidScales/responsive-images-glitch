@@ -9,23 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/style.css">
 
-    <style>
-      img {
-        width: 90vw;
-      }
-
-      @media (min-width: 450px) {
-        img {
-          width: 85vw;
-        }
-      }
-
-      @media (min-width: 1000px) {
-        img {
-          width: 75vw;
-        }
-      }
-    </style>
+    <!-- TODO: add some media queries -->
 
   </head>
   <body>
@@ -34,21 +18,15 @@
     </header>
     <section id="window-width"></section>
     <main>
-
         <div id="img-url"></div>
 
+
         <!-- TODO: make our image responsive! -->
-        <img srcset="/images/doggo-small.jpg 400w,
-                     /images/doggo-medium.jpg 800w,
-                     /images/doggo-large.jpg 1200w"
-             sizes="(min-width: 1000px) 75vw,
-                    (min-width: 450px) 85vw,
-                    90vw"
-             src="doggo-small.jpg" alt="A handsome doggo waiting patiently">
+        <img src="doggo-medium.jpg" alt="A handsome doggo waiting patiently">
+
 
         <br>
         <section id="img-width"></section>
-
     </main>
     <footer>
       <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">

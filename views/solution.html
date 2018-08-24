@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Responsive Images</title>
+    <meta name="description" content="A responsive images exercise">
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+
+    <style>
+      img {
+        width: 90vw;
+      }
+
+      @media (min-width: 450px) {
+        img {
+          width: 85vw;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        img {
+          width: 75vw;
+        }
+      }
+    </style>
+
+  </head>
+  <body>
+    <header>
+      <h1>Responsive Images</h1>
+    </header>
+    <section id="window-width"></section>
+    <main>
+        <div id="img-url"></div>
+
+
+        <!-- Now our image is responsive! -->
+        <img srcset="/images/doggo-small.jpg 400w,
+                     /images/doggo-medium.jpg 800w,
+                     /images/doggo-large.jpg 1200w"
+             sizes="(min-width: 1000px) 75vw,
+                    (min-width: 450px) 85vw,
+                    90vw"
+             src="doggo-small.jpg" alt="A handsome doggo waiting patiently">
+
+
+        <br>
+        <section id="img-width"></section>
+    </main>
+    <footer>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">
+        Learn more
+      </a>
+    </footer>
+    <script src="/show-measurements.js"></script>
+  </body>
+</html>
