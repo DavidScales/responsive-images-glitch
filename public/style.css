@@ -27,6 +27,36 @@ main {
   border: 1px solid black;
 }
 
+.left-arrow {
+  border-bottom: 10px solid #f6f6f6;
+  border-right: 20px solid #77c;
+  border-top: 10px solid #f6f6f6;
+  font-size: 0;
+  line-height: 0%;
+  width: 0;
+}
+
+.right-arrow {
+  border-bottom: 10px solid #f6f6f6;
+  border-left: 20px solid #77c;
+  border-top: 10px solid #f6f6f6;
+  font-size: 0;
+  line-height: 0%;
+  width: 0;
+}
+
+.across {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.line {
+  border-bottom: 2px green solid;
+  transform: translateY(-43%);
+  width: 100%;
+}
+
 p {
   font-size: 1.1rem;
   padding: 10px;
@@ -43,7 +73,7 @@ footer {
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   height: 7vh;
   justify-content: center;
   min-height: 50px;

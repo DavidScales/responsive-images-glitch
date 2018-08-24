@@ -26,36 +26,6 @@
         }
       }
     </style>
-
-    <style>
-      .left-arrow {
-        font-size: 0px; line-height: 0%; width: 0px;
-        border-top: 10px solid #f6f6f6;
-        border-right: 20px solid #77c;
-        border-bottom: 10px solid #f6f6f6;
-      }
-
-      .right-arrow {
-        font-size: 0px; line-height: 0%; width: 0px;
-        border-top: 10px solid #f6f6f6;
-        border-left: 20px solid #77c;
-        border-bottom: 10px solid #f6f6f6;
-      }
-
-      .across {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-      }
-
-      .line {
-        border-bottom: 2px green solid;
-        width: 100%;
-        transform: translateY(-43%);
-      }
-    </style>
-
-    <script src="/client.js" defer></script>
   </head>
   <body>
     <header>
@@ -63,7 +33,6 @@
     </header>
 
     <section class="banner">
-
         <p>Window width: <span id="window-width"></span></p>
         <div class="across">
           <span class="left-arrow"></span>
@@ -71,15 +40,16 @@
           <span class="right-arrow"></span>
         </div>
     </section>
-    <main>
 
+    <main>
+        <!-- TODO: make our image responsive! -->
         <img srcset="/images/doggo-small.jpg 400w,
-                    /images/doggo-medium.jpg 800w,
-                    /images/doggo-large.jpg 1200w"
-            sizes="(min-width: 1000px) 75vw,
-                  (min-width: 450px) 85vw,
-                  90vw"
-            src="doggo-small.jpg" alt="A handsome doggo waiting patiently">
+                     /images/doggo-medium.jpg 800w,
+                     /images/doggo-large.jpg 1200w"
+             sizes="(min-width: 1000px) 75vw,
+                    (min-width: 450px) 85vw,
+                    90vw"
+             src="doggo-small.jpg" alt="A handsome doggo waiting patiently">
 
         <p>Image URL: <span id="img-url"></span></p>
         <p>Current Image width: <span id="img-width"></span></p>
@@ -88,26 +58,13 @@
           <span class="line"></span>
           <span class="right-arrow"></span>
         </div>
-
-
     </main>
 
-    <footer></footer>
-
-    <script>
-      // TODO: throttle the resize event listener
-      const imgElem = document.querySelector('img');
-      const imgUrlElem = document.querySelector('#img-url');
-      const imgWidthElem = document.querySelector('#img-width');
-      const windowWidthElem = document.querySelector('#window-width');
-      const updatePage = () => {
-        imgUrlElem.textContent = imgElem.currentSrc.replace(/^.*\/\/[^\/]+/, '');
-        imgWidthElem.textContent = imgElem.naturalWidth + 'px';
-        windowWidthElem.textContent = window.innerWidth + 'px';
-      };
-      updatePage();
-      window.addEventListener('resize', updatePage);
-    </script>
-
+    <footer>
+      <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images">
+        Learn more
+      </a>
+    </footer>
+    <script src="/show-measurements.js"></script>
   </body>
 </html>
