@@ -25,10 +25,6 @@ section {
   border-right: 1px solid black;
 }
 
-main {
-  /* border: 1px solid black; */
-}
-
 .left-arrow {
   border-bottom: 10px solid #ffffff;
   border-right: 20px solid #3F51B5;
